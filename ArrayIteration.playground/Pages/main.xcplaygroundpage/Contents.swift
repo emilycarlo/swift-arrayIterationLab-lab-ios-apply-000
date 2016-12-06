@@ -15,6 +15,7 @@
  */
 // write your code here
 
+var shoppingCart: [String] = ["Chips", "Salsa", "Guacamole", "Red wine"]
 
 
 
@@ -25,6 +26,7 @@
  */
 // write your code here
 
+var numbersTo10: [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 
 
@@ -37,7 +39,9 @@
 // write your code here
 
 
-
+for number in numbersTo10 {
+    print (number)
+}
 
 
 
@@ -47,6 +51,9 @@
  */
 // write your code here
 
+for item in shoppingCart {
+    print("I want a: \(item)")
+}
 
 
 
@@ -58,9 +65,13 @@
  */
 // write your code here
 
+func printItem(item: String) {
+    print("You want a: \(item)")
+}
 
-
-
+for item in shoppingCart {
+    printItem(item: item)
+}
 
 
 
@@ -69,6 +80,14 @@
  */
 // write your code here
 
+let people = ["Emily", "Cristina", "Michael"]
+func greetPeople(people: [String]) {
+    for person in people {
+        if person == "Michael" {
+            print("Top of the morning \(person)!")
+        }
+    }
+}
 
 
 
@@ -79,10 +98,20 @@
  */
 // write your code here
 
+func numbersLessThan50(grades: [Int]) -> [Int] {
+    var numbersLessThan50: [Int] = []
+    
+    for number in numbersLessThan50 {
+        if number <= 50 {
+            numbersLessThan50.append(number)
+        }
+    }
+    
+    return numbersLessThan50
+}
 
+let numbers = [40, 60, 50, 52, 59, 13, 90, 100, 5, 52, 51, 49]
 
+var finalNumbers = numbersLessThan50(grades: numbers)
 
-
-
-
-
+print (finalNumbers)
